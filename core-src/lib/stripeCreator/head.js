@@ -18,7 +18,7 @@ async function fadeIn(red, green, blue) {
     showStrip(stripe);
   }
 }
-
+// Path: core-src/lib/stripeCreator/foot.js
 /**
  * creates the neopixel fadeOut effect for the whole string (is shit in my case)
  *

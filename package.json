@@ -6,8 +6,8 @@
   "scripts": {
     "dev:app": "lerna run dev --scope screenchaser-app",
     "dev:core": "lerna run dev --scope screenchaser-core",
-    "build:app": "lerna run build --scope screenchaser-app",
-    "build:app-win64": "lerna run build:win64 --scope screenchaser-app",
+    "build:lin-app": "lerna run build --scope screenchaser-app",
+    "build:win-app": "lerna run build:win --scope screenchaser-app",
     "build:core": "lerna run build --scope screenchaser-core",
     "release": "lerna version --conventional-commits --yes"
   },

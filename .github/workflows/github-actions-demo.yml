@@ -1,12 +1,13 @@
-name: CI
+name: Release
 on: [push]
 
 jobs:
-  build:
-    name: Test
-    runs-on: ubuntu-latest
+  win-build:
+    name: Windows Build App
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
@@ -21,4 +22,11 @@ jobs:
       - name: Build production bundle
         uses: borales/actions-yarn@v4
         with:
-          cmd: build:app # will run `yarn build:prod` command
+          cmd: build:app-win # will run `yarn build:app` command
+
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: |
+            app-src/dist/*.exe
