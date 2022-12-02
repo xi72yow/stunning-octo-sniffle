@@ -1,7 +1,7 @@
 {
   "name": "screenchaser-app",
   "description": "leds are follow me",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "xi72yow <x@xi72yow.de> (https://xi72yow.de)",
   "main": "app/background.js",
   "homepage": "https://github.com/xi72yow/ScreenChaser",
