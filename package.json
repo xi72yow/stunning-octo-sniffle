@@ -22,7 +22,9 @@
       "**/electron",
       "**/electron/**",
       "**/jest",
-      "**/jest/**"
+      "**/jest/**",
+      "**/screenchaser-app/**",
+      "**/screenchaser-cli/**"
     ]
   },
   "devDependencies": {
