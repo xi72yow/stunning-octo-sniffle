@@ -3,12 +3,21 @@ on: [push]
 
 jobs:
   release:
-    name: Release Screenchser
+    name: Release Screenchaser
     runs-on: ubuntu-latest
     needs: [win-build, linux-build]
     steps:
       - name: Download All Artifacts
         uses: actions/download-artifact@v3
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: |
+            ./*.AppImage
+            ./*.deb
+            ./*.exe
 
   win-build:
     name: Windows Build App
