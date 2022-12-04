@@ -1,7 +1,7 @@
 import setPixel from "./basics/setPixel";
 import random from "./basics/random";
 import setAll from "./basics/setAll";
-
+//change
 class FrostyPike {
   count: number;
   baseStripe: Array<string>;
