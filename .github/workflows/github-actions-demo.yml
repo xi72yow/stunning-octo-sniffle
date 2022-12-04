@@ -20,7 +20,8 @@ jobs:
         with:
           name: lin-build-app
           path: ./
-      - run: ls -R
+      - name: generate sha256sum
+        run: sha256sum -b * > Release.md
       - name: Create Release
         uses: softprops/action-gh-release@v1
         env:
@@ -30,6 +31,7 @@ jobs:
             ./*.AppImage
             ./*.deb
             ./*.exe
+            ./*.md
 
   win-build:
     name: Windows Build App
