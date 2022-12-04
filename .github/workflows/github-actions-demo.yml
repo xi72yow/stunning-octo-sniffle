@@ -20,8 +20,10 @@ jobs:
         with:
           name: lin-build-app
           path: ./
-      - name: generate sha256sum
-        run: sha256sum -b * > Release.md
+      - name: generate release.md head
+        run: echo -e "# ScreenChaser Release \n## Changes \n- [Changelog app](https://github.com/xi72yow/ScreenChaser/blob/main/app-src/CHANGELOG.md) \n- [Changelog core](https://github.com/xi72yow/ScreenChaser/blob/main/core-src/CHANGELOG.md) \n## sha256sums" >> Release.md
+      - name: generate sha256sums
+        run: sha256sum -b * >> Release.md
       - name: Create Release
         uses: softprops/action-gh-release@v1
         env:
@@ -32,7 +34,6 @@ jobs:
             ./*.AppImage
             ./*.deb
             ./*.exe
-            ./*.md
 
   win-build:
     name: Windows Build App

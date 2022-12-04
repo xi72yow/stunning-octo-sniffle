@@ -2,6 +2,7 @@ import setPixel from "./basics/setPixel";
 import random from "./basics/random";
 import setAll from "./basics/setAll";
 //change the color of the pixels
+//to a random color
 class FrostyPike {
   count: number;
   baseStripe: Array<string>;
