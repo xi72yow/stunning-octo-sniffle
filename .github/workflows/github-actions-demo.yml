@@ -20,8 +20,8 @@ jobs:
         with:
           name: lin-build-app
           path: ./
-      - name: generate release.md head
-        run: echo -e "# ScreenChaser Release \n## Changes \n- [Changelog app](https://github.com/xi72yow/ScreenChaser/blob/main/app-src/CHANGELOG.md) \n- [Changelog core](https://github.com/xi72yow/ScreenChaser/blob/main/core-src/CHANGELOG.md) \n## sha256sums" >> Release.md
+      - name: generate Release.md head
+        run: echo -e "# ScreenChaser Release \n## Changes and Fixes \n- [Changelog app](https://github.com/xi72yow/ScreenChaser/blob/main/app-src/CHANGELOG.md) \n- [Changelog core](https://github.com/xi72yow/ScreenChaser/blob/main/core-src/CHANGELOG.md) \n## SHA256 checksums" >> Release.md
       - name: generate sha256sums
         run: sha256sum -b * >> Release.md
       - name: Create Release
